@@ -1,0 +1,94 @@
+@charset "UTF-8";
+ul#album{
+    width: 800px;
+    padding: 50px;
+    list-style: none;
+    overflow: hidden;
+    margin: 0 auto;
+}
+ul#album li{
+    float: left;
+    border: 10px solid white;
+    padding: 2px;
+    margin: 10px;
+    box-shadow: 2px 2px 3px rgba(0, 0, 0, 0.5);
+    background-color: white;
+    width: 200px;
+    height: 200px;
+    -webkit-transition: all 0.4s ease-in;
+}
+ul#album li#f1{
+    background: url("foto01.jpg");
+    background-size: 300px 200px;
+    background-position: 50% 50%;
+    background-color: white;
+}
+ul#album li#f2{
+    background: url("foto02.jpg");
+    background-size: 300px 200px;
+    background-position: 50% 50%;
+    background-color: white;
+}
+ul#album li#f3{
+    background: url("foto03.jpg");
+    background-size: 300px 200px;
+    background-position: 50% 50%;
+    background-color: white;
+}
+ul#album li#f4{
+    background: url("foto04.jpg");
+    background-size: 300px 200px;
+    background-position: 50% 50%;
+    background-color: white;
+}
+ul#album li#f5{
+    background: url("foto05.jpg");
+    background-size: 300px 200px;
+    background-position: 50% 50%;
+    background-color: white;
+}
+ul#album li#f6{
+    background: url("foto06.jpg");
+    background-size: 300px 200px;
+    background-position: 50% 50%;
+    background-color: white;
+}
+ul#album li#f1:hover{
+    background-position: 0px 0px;
+    background-size: 200px 200px;
+}
+ul#album li#f2:hover{
+    background-position: 0px 0px;
+    background-size: 200px 200px;
+}
+ul#album li#f3:hover{
+    background-position: 0px 0px;
+    background-size: 200px 200px;
+}
+ul#album li#f4:hover{
+    background-position: 0px 0px;
+    background-size: 200px 200px;
+}
+ul#album li#f5:hover{
+    background-position: 0px 0px;
+    background-size: 200px 200px;
+}
+ul#album li#f6:hover{
+    background-position: 0px 0px;
+    background-size: 200px 200px;
+}
+ul#album li:hover{
+    -webkit-transform: scale(1.5);
+}
+ul#album li span{
+    opacity: 0;
+    color: white;
+    background-color: rgba(0, 0, 0, 0.4);
+    padding: 5px;
+    box-shadow: 1px 1px 1px black;
+    font-size: 9pt;
+    line-height: 370px;
+}
+ul#album li:hover span{
+    opacity: 1;
+}

@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <title>fale-conosco</title>
+    <link rel="stylesheet" href="fale-conosco.css">
+    <link rel="stylesheet" href="estilos-css.css">
+    <script src="funcoes.js"></script>
+    <script>
+        function preco_total(){
+            var qtd = parseInt(document.getElementById("cqtd").value);
+            tot = qtd * 10;
+            document.getElementById("ctot").value = tot;
+        }
+    </script>
+</head>
+<body>
+<nav id="menu">
+    <h1>Menu Principal</h1>
+    <ul type="disc">
+        <li onmouseover="mudar('home.png')" onmouseout="mudar('contato.png')"><a href="aprendendo.html">Home</a></li>
+        <li onmouseover="mudar('fotos.png')" onmouseout="mudar('contato.png')"><a href="fotos.html">Fotos</a></li>
+        <li onmouseover="mudar('sobre-nos.png')" onmouseout="mudar('contato.png')"><a href="sobre-nos.html">Sobre nós</li>
+        <li onmouseover="mudar('contato.png')" onmouseout="mudar('contato.png')"><a href="fale-conosco.html">Fale conosco</a></li>
+    </ul>
+</nav>
+<img src ="icone.png" id="icone">
+<div id="interface">
+<h1 style="text-align: center">Fale conosco</h1>
+
+<form method="post" id="contato" action="mailto:luisamartins1112@gmail.com" oninput="preco_total();">
+<fieldset id="usuario">
+    <legend>Informações do Cliente</legend>
+    <p><label for="cnome">Nome:</label><input type="text" name="tnome" id="cnome" maxlength="30" size="20" placeholder="Nome Completo"/></p>
+    <p><label for="cnasc">Data de Nascimento:</label><input type="date" name="tnasc" id="cnasc"/></p>
+    <p><label for="csenha">Senha:</label><input type="password" name="tsenha" id="csenha" size="8" maxlength="8" placeholder="8 dígitos"/></p>
+    <p><label for="cmail">E-mail:</label><input type="email" name="tmail" id="cmail"/></p>
+    <fieldset id="sexo">
+        <legend>Sexo:</legend>
+        <p><input type="radio" name="tsexo" id="cmasc"><label for="cmasc">Masculino:</label></p>
+        <p><input type="radio" name="tsexo" id="cfem"><label for="cfem">Feminino:</label></p>
+    </fieldset>
+</fieldset>
+
+<fieldset id="endereco">
+    <legend>Endereço:</legend>
+    <p><label for="clog">Logradouro:</label><input type="text" name="tlog" id="clog" placeholder="Rua, Av, Trav, ..."/></p>
+    <p><label for="cnum">Número:</label><input type="number" name="tnum" id="cnum" min="0" max="99999"/></p>
+    <p><label for="cest">Estado:</label><select name="test" id="cest">
+        <optgroup label="Região Sudeste">
+            <option value="RJ" selected>Rio de Janeiro</option>
+            <option value="SP">São Paulo</option>
+        </optgroup>
+        <optgroup label="Região Sul">
+            <option value="SC">Santa Catarina</option>
+            <option value="RS">Rio Grande do Sul</option>
+        </optgroup>
+    </select></p>
+    <p><label for="ccid">Cidade:</label><input type="text" name="tcid" id="ccid" list="cidades"</p>
+    <datalist id="cidades">
+        <option value="Rio de Janeiro"></option>
+        <option value="Cabo Frio"></option>
+        <option value="Niterói"></option>
+        <option value="Maricá"></option>
+    </datalist>
+</fieldset>
+
+<fieldset id="mensagem">
+    <legend>Nos escreva:</legend>
+    <p><label for="curg">Grau de Urgencia:</label>Mín<input type="range" name="turg" id="curg" min="0" max="10"/>Máx</p>
+    <p><label for="cmsg">Mensagem:</label><textarea name="tmsg" id="cmsg" cols="40" rows="5" placeholder="Deixe aqui sua mensagem"></textarea></p>
+</fieldset>
+
+<fieldset id="pedido">
+    <legend>Faça a sua encomenda</legend>
+    <p><input type="checkbox" name="tbox" id="cbox" checked/><label for="cbox">Gostaria de receber notificações das novidades e promoções</label></p>
+    <p><label for="cqtd">Quantidade de fotos:</label><input type="number" name="tqtd" id="cqtd" min="0" max="100"/></p>
+    <p>Preço Total:<input type="text" name="ttot" id="ctot" readonly/></p>
+</fieldset>
+<input type="submit" value="Enviar"/>
+</form>
+
+    <footer id="rodape">
+        <a href="https://www.instagram.com/flmartinsfotografia/" target="_blank">Instagram</a> <br/>
+        Flavia Martins - Luisa Martins
+    </footer>
+</div>
+</body>
+</html>

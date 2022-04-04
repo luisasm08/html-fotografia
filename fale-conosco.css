@@ -1,0 +1,42 @@
+@charset "UTF-8";
+
+footer#rodape a{
+    color: black;
+    text-decoration: none;
+}
+footer#rodape a:hover{
+    color: #888888;
+    text-decoration: underline;
+}
+footer#rodape{
+    margin-top: 20px;
+}
+body{
+    background-image: url("fundo.jpeg");
+}
+form{
+    margin: auto;
+    width: 700px;
+}
+input, textarea{
+    background-color: rgba(255, 255, 255, 0.8);
+    margin: 20px;
+}
+input:hover, textarea:hover{
+    background-color: #dddddd;
+}
+fieldset{
+    border-color: #cecece;
+}
+fieldset#usuario{
+    background: url("icone-contato.png") no-repeat 95% 95%;
+}
+fieldset#endereco{
+    background: url("icone-endereco.png") no-repeat 95% 95%;
+}
+fieldset#mensagem{
+    background: url("icone-mensagem.png") no-repeat 95% 95%;
+}
+fieldset#pedido{
+    background: url("icone-pagamento.png") no-repeat 95% 95%;
+}
